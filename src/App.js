@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import Navbar from './Components/Navbar.js'
+import Secondnavbar from './Components/Secondnavbar.js'
+import { BrowserRouter } from 'react-router-dom'
+import Banner from './Components/Banner.js'
+import Belowbanner from './Components/Belowbanner.js'
+import Destination from './Components/Destination.js'
+import Tours from './Components/Tours.js'
+import Attraction from './Components/Attraction.js'
+import Thirdnavbar from './Components/Thirdnavbar.js'
+import BodyFooter from './Components/Footer/BodyFooter.js'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
+      <Secondnavbar />
+      <Banner />
+      <Belowbanner />
+      <Destination />
+      <Tours />
+      <Attraction />
+      <BrowserRouter>
+        <Thirdnavbar />
+      </BrowserRouter>
+      <BodyFooter />
+    </>
+  )
 }
 
-export default App;
+export default App
